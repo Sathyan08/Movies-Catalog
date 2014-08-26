@@ -1,0 +1,11 @@
+<ul>
+  <li>Title: <%= @movie[0]["title"]%></li>
+  <li>Studio: <%= @studio[0]["name"] %></li>
+  <li>Genre: <%= @genre[0]["name"] %></li>
+</ul>
+
+<ol>
+  <% @actors.each do |actor| %>
+  <li><a href="/actors/<%= actor["actor_id"]%>"><%= actor["name"]%></a>  as <%= actor["character"] %></li>
+  <% end %>
+</ol>
